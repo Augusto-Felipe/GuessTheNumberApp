@@ -1,24 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GuessTheNumberApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="J1u-5l-ZX0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess The Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsS-dL-rmO">
+                                <rect key="frame" x="20" y="131" width="374" height="38.5"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <color key="textColor" systemColor="systemGray6Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adivinhe o número entre 1 e 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ct8-es-Ro9">
+                                <rect key="frame" x="0.0" y="221.5" width="414" height="22"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGray6Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite um número:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qw0-Ij-jTl">
+                                <rect key="frame" x="102" y="340.5" width="210" height="22"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGray6Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mIO-MF-ouV">
+                                <rect key="frame" x="159" y="428.5" width="96" height="39.5"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyk-9x-zKM">
+                                <rect key="frame" x="138" y="525.5" width="138" height="35.5"/>
+                                <color key="tintColor" red="0.91372549020000005" green="0.92549019610000005" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="OK">
+                                    <fontDescription key="titleFontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="okButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1lw-Ke-7qE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pyk-9x-zKM" secondAttribute="bottom" constant="301" id="03G-vT-Uv2"/>
+                            <constraint firstItem="J1u-5l-ZX0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0vj-Ta-cfU"/>
+                            <constraint firstItem="xsS-dL-rmO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="87" id="1QG-XC-f37"/>
+                            <constraint firstItem="mIO-MF-ouV" firstAttribute="top" secondItem="Qw0-Ij-jTl" secondAttribute="bottom" constant="66" id="36z-bw-ZQM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mIO-MF-ouV" secondAttribute="trailing" constant="159" id="5ka-k1-uFl"/>
+                            <constraint firstItem="Ct8-es-Ro9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7NB-ic-Vsu"/>
+                            <constraint firstItem="J1u-5l-ZX0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7hp-hd-ieU"/>
+                            <constraint firstAttribute="bottom" secondItem="J1u-5l-ZX0" secondAttribute="bottom" id="Cgx-gM-sQV"/>
+                            <constraint firstItem="Qw0-Ij-jTl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="102" id="Dem-aH-Pbm"/>
+                            <constraint firstItem="xsS-dL-rmO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DpG-Pc-rp5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pyk-9x-zKM" secondAttribute="trailing" constant="138" id="E3k-cE-SUX"/>
+                            <constraint firstItem="mIO-MF-ouV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="Q67-LK-9Kz"/>
+                            <constraint firstItem="Qw0-Ij-jTl" firstAttribute="top" secondItem="Ct8-es-Ro9" secondAttribute="bottom" constant="97" id="QDG-Iw-kbn"/>
+                            <constraint firstItem="J1u-5l-ZX0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Sbc-FW-QqM"/>
+                            <constraint firstItem="mIO-MF-ouV" firstAttribute="top" secondItem="Qw0-Ij-jTl" secondAttribute="bottom" constant="66" id="UsZ-Nn-fjb"/>
+                            <constraint firstItem="Pyk-9x-zKM" firstAttribute="top" secondItem="mIO-MF-ouV" secondAttribute="bottom" constant="57.5" id="Vop-Lq-NhM"/>
+                            <constraint firstItem="mIO-MF-ouV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bSx-Xo-4QT"/>
+                            <constraint firstItem="mIO-MF-ouV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dFc-vi-hCt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xsS-dL-rmO" secondAttribute="trailing" constant="20" id="fPE-A6-9Qx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qw0-Ij-jTl" secondAttribute="trailing" constant="102" id="jzi-tc-IDz"/>
+                            <constraint firstItem="Pyk-9x-zKM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="138" id="nZ8-rL-W5s"/>
+                            <constraint firstItem="Qw0-Ij-jTl" firstAttribute="top" secondItem="Ct8-es-Ro9" secondAttribute="bottom" constant="97" id="r9U-fQ-zMo"/>
+                            <constraint firstItem="Pyk-9x-zKM" firstAttribute="top" secondItem="mIO-MF-ouV" secondAttribute="bottom" constant="57.5" id="vzY-Hu-FZv"/>
+                            <constraint firstItem="Ct8-es-Ro9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yyT-QG-h0D"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="numberTextField" destination="mIO-MF-ouV" id="qDJ-Ma-gNL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="66.666666666666671" y="99.776785714285708"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="600" height="1064"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
