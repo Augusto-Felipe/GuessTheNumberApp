@@ -41,7 +41,7 @@
                                 <rect key="frame" x="159" y="428.5" width="96" height="39.5"/>
                                 <color key="textColor" systemColor="linkColor"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="30"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyk-9x-zKM">
                                 <rect key="frame" x="138" y="525.5" width="138" height="35.5"/>

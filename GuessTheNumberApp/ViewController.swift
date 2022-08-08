@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var numberTextField: UITextField!
     
@@ -15,9 +15,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        //KeyboardType
+        numberTextField.delegate = self
+        numberTextField.keyboardType = .numberPad
     }
     
-    
+    //Alert Function
     func makeAlert(message: String, title: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
@@ -25,7 +28,13 @@ class ViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    //Only numbers in TextField
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            let invalidCharacters = CharacterSet(charactersIn: "0123456789").inverted
+            return string.rangeOfCharacter(from: invalidCharacters) == nil
+        }
     
+    //Button
     @IBAction func okButtonClicked(_ sender: Any) {
         
         let randomNumber = Int.random(in: 1...10)
