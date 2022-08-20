@@ -40,7 +40,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let randomNumber = Int.random(in: 1...10)
         
         if numberTextField.text == "" {
-            makeAlert(message: "Digite um número!", title: "Erro!")
+            makeAlert(message: "Digite um número!!", title: "Erro!")
             print(randomNumber)
         } else {
             if randomNumber == Int(numberTextField.text!)! {
